@@ -6,14 +6,15 @@
 }
 
 :root {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
-  --color-page: #fefefe;
+  --color-white: #fefefe;
+  --color-page: var(--color-white);
   --color-text: #111;
   --color-primary: #006DEA;
   --color-secondary: #EF7F00;
   --color-tertiary: #004C98;
-  --color-link: var(--color-primary);
+  --color-link: var(--color-white);
   --color-focus: var(--color-secondary);
   --font-base: "Montserrat", Helvetica, sans-serif;
   --font-titles: "Montserrat", Helvetica, sans-serif;
@@ -31,12 +32,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
+
+  @media screen and (min-width: 320px) {
+    :root {
+      font-size: 20px;
+    }
+  }
 
 a {
   color: var(--color-link);
   /* // Improves readability when focused. */
   /* // Only alter :focus-within, :focus-visible user agent property. */
+  font-weight: 600;
   outline-offset: .1rem;
   outline-color: var(--color-focus) !important;
   position: relative;
@@ -69,18 +80,18 @@ h1, h2, h3, h4, h5, h6 {
 /* Helpers */
 .container {
   box-sizing: border-box;
-  max-width: 68.5rem;
-  margin: 0 auto;
+  max-width: 28rem;
+  margin: 3rem auto;
   padding: 0 1rem;
 }
 
-.site-header {
-  margin: 3rem auto;
+header {
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .site-name {
   display: inline-block;
-
 }
   .site-name span {
     position: absolute;
@@ -98,10 +109,23 @@ h1, h2, h3, h4, h5, h6 {
     width: 14rem;
   }
 
-.site-main {
-  margin: 3rem auto;
+section {
+  background-color: var(--color-primary);
+  border-radius: 2rem;
+  margin: 2rem 0;
+  padding: 2rem;
 }
 
-.site-main__title {
-  font-size: 1.2rem;
+h1 {
+  color: var(--color-white);
+  font-size: 1.15rem;
+  margin-top: 0;
 }
+
+p {
+  color: var(--color-white);
+  font-size: 1.1rem;
+}
+  p:last-child {
+    margin-bottom: 0;
+  }
