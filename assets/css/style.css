@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header {
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
 .site-name {
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .site-name img {
-    width: 10rem;
+    width: 14rem;
   }
 
 .site-main {
